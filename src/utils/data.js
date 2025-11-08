@@ -25,7 +25,7 @@ import {
 import { VscVscode } from "react-icons/vsc";
 
 import { TbBrandLeetcode } from "react-icons/tb";
-import resume from "../assets/Sanjay Resume.pdf";
+import resume from "../assets/Sanjay_Resume.pdf";
 import Idcard from "../assets/Project/Idcard.png";
 import MovieHub from "../assets/Project/MovieHub.png";
 import apps from "../assets/Project/30apps.png";
