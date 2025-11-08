@@ -138,7 +138,7 @@ export const projects = [
     description:
       "Developed a movie platform with Google Authentication for secure login and JWT-based session management. Integrated REST APIs for real-time movie data, added search, watchlist, and responsive UI features.",
     image: MovieHub,
-    demo: "https://moviehub.sanjay.vercel.app",
+    demo: "https://moviehub-sanjay.vercel.app/",
     repo: "https://github.com/sanjaydeveloper-001/The-Movie-Hub",
   },
   {
