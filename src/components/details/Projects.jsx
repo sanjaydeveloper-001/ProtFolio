@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import ProjectOverlay from "./ProjectOverlay";
 import { projects } from "../../utils/data";
+import { LuLibrary } from "react-icons/lu";
 
 export default function Projects() {
   const [open, setOpen] = useState(null);
@@ -29,8 +30,8 @@ export default function Projects() {
   return (
     <section className="w-full">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl sm:text-3xl font-[Poppins] font-bold text-cyan-400">
-          Projects
+        <h2 className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400">
+          <LuLibrary /> Projects 
         </h2>
       </div>
 

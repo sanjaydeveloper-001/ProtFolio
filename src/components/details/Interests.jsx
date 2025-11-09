@@ -9,8 +9,8 @@ export default function Interests() {
     <section>
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-[Poppins] font-bold text-cyan-400 flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-cyan-300" />
+        <h2 className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400">
+          <Sparkles /> 
           Interests
         </h2>
         <p className="text-xs text-zinc-500 hidden sm:block">

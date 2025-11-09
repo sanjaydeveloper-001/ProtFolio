@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Briefcase, Calendar } from "lucide-react";
 import { experience } from "../../utils/data";
 
+
 /*
   Modified Experience component:
   - Accepts experience = [{ id, company, role, duration, description (string), type? }, ...]
@@ -13,8 +14,8 @@ import { experience } from "../../utils/data";
 export default function Experience() {
   return (
     <section>
-      <h2 className="text-xl font-[Poppins] font-bold text-cyan-400 mb-6">
-        Experience
+      <h2 className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400 mb-6">
+        <Briefcase/> Experience 
       </h2>
 
       <div className="relative pl-6 sm:pl-10">

@@ -1,3 +1,4 @@
+import { IoCodeSlashOutline } from "react-icons/io5";
 
 export default function Stats({
   leetUsername = "Sanjay_dev_001",
@@ -13,8 +14,8 @@ export default function Stats({
 
   return (
     <section>
-      <h2 className="text-xl font-[Poppins] font-bold text-cyan-400 mb-4">
-        Coding Stats
+      <h2 className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400 mb-4">
+         <IoCodeSlashOutline /> Coding Stats
       </h2>
 
       <div className="flex flex-wrap justify-center gap-6">

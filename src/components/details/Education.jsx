@@ -1,8 +1,8 @@
-// src/components/details/Education.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Calendar } from "lucide-react";
 import { education } from "../../utils/data";
+import { GiGraduateCap } from "react-icons/gi";
 
 export default function Education() {
   if (!Array.isArray(education) || education.length === 0) {
@@ -12,8 +12,8 @@ export default function Education() {
   return (
     <section aria-labelledby="education-heading">
       <div className="flex items-center justify-between mb-4">
-        <h2 id="education-heading" className="text-xl font-[Poppins] font-bold text-cyan-400">
-          Education
+        <h2 id="education-heading" className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400">
+          <GiGraduateCap /> Education 
         </h2>
         <div className="hidden sm:flex items-center gap-2 text-xs text-zinc-400">
           <BookOpen className="w-4 h-4 text-cyan-300" />

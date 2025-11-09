@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { profile } from "../../utils/data";
 import { Send, Sparkles } from "lucide-react";
 import emailjs from "emailjs-com";
-
+import { FaPhone } from "react-icons/fa6";
 /*
   **Security note (kept as-is for demo)**:
   Do NOT commit EmailJS keys to public repos. Use an API route or serverless function to send emails safely.
@@ -41,14 +41,14 @@ export default function Contact() {
       );
 
       if (result && (result.text === "OK" || result.status === 200)) {
-        setStatus("Message sent successfully ✅");
+        setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus("Message sent, but response unclear.");
       }
     } catch (error) {
       console.error("EmailJS Error:", error);
-      setStatus("Something went wrong ❌");
+      setStatus("Something went wrong !");
     } finally {
       setLoading(false);
     }
@@ -56,8 +56,8 @@ export default function Contact() {
 
   return (
     <section className="relative" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" className="text-xl font-[Poppins] font-bold text-cyan-400 mb-6">
-        Contact
+      <h2 id="contact-heading" className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400 mb-6">
+       <FaPhone /> Contact 
       </h2>
 
       <div className="flex flex-col md:flex-row gap-8 items-stretch">

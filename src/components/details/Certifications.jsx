@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { certifications } from "../../utils/data";
+import { GrCertificate } from "react-icons/gr";
 
 export default function Certifications() {
   const [expanded, setExpanded] = useState(false);
@@ -12,7 +13,7 @@ export default function Certifications() {
   return (
     <section>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-[Poppins] font-bold text-cyan-400">Certifications</h2>
+        <h2 className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400">Certifications <GrCertificate/></h2>
         <p className="text-xs text-zinc-500 hidden sm:block">Verified courses & achievements</p>
       </div>
 

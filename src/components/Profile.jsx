@@ -18,7 +18,7 @@ export default function Profile({ className }) {
       transition={{ duration: 0.55, ease: "easeOut" }}
       className={`${className} 
         bg-linear-to-br from-[#030406] via-[#05070a] to-[#020305]
-        rounded-3xl p-10 sm:p-12 shadow-xl ring-1 ring-white/5
+        rounded-3xl p-10 sm:p-12 shadow-xl ring-1 ring-white/20
         backdrop-blur-md font-[Inter]
         flex flex-col items-center justify-center text-center space-y-8`}
     >

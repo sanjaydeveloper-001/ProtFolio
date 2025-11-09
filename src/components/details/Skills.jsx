@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { skills, TECH_ICON_MAP } from "../../utils/data";
+import { VscTools } from "react-icons/vsc";
 
 // icons
 import { FaDatabase } from "react-icons/fa";
@@ -23,7 +24,7 @@ export default function Skills() {
 
   return (
     <section>
-      <h2 className="text-xl font-[Poppins] font-bold text-cyan-400 mb-4">Technologies</h2>
+      <h2 className="flex items-center gap-1 text-xl sm:text-2xl font-[Poppins] font-bold text-cyan-400 mb-4"><VscTools/> Technologies </h2>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {/* === Frameworks, Tools, Databases, Soft Skills === */}
