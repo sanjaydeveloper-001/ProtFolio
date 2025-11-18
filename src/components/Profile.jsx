@@ -115,7 +115,7 @@ export default function Profile({ className }) {
           <motion.div
             whileTap={{ scale: 0.9}}
             transition={{ delay:0.1 }}
-            // onClick={() => window.open("https://" + pro.link, "_blank")}
+            onClick={() => window.open("https://" + pro.link, "_blank")}
             key={i}
             className="flex items-center gap-2 px-3 py-1.5 rounded-full
                        bg-[#0a0e12]/70 border border-[#2374b7]
