@@ -14,26 +14,33 @@ export default function Contact() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) =>
+  const handleChange = (e) =>{
+    setStatus("");
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
 
-  // placeholder values — move these to server in production!
   const YOUR_SERVICE_ID = import.meta.env.VITE_APP_EMAILJS_SERVICE || "service_xxx";
   const YOUR_TEMPLATE_ID = import.meta.env.VITE_APP_EMAILJS_TEMPLATE || "template_xxx";
-  const YOUR_PUBLIC_KEY = import.meta.env.VITE_APP_EMAILJS_KEY || "public_xxx";
+  const YOUR_PUBLIC_KEY = import.meta.env.VITE_APP_EMAILJS_KEY || "public_xxx"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("");
     setLoading(true);
 
+    if(!formData.name.trim() || !formData.email.trim() || !formData.message.trim()){
+      setStatus("Please fill all fields!");
+      setLoading(false);
+      return;
+    }
+
     try {
       const result = await emailjs.send(
         YOUR_SERVICE_ID,
         YOUR_TEMPLATE_ID,
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
           to_email: profile.email,
         },
@@ -107,7 +114,6 @@ export default function Contact() {
           <input
             type="text"
             name="name"
-            required
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter your name"
@@ -118,7 +124,6 @@ export default function Contact() {
           <input
             type="email"
             name="email"
-            required
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter your email"
@@ -128,7 +133,6 @@ export default function Contact() {
           <label className="text-sm text-cyan-300">Message</label>
           <textarea
             name="message"
-            required
             value={formData.message}
             onChange={handleChange}
             placeholder="Write your message..."
@@ -163,7 +167,7 @@ export default function Contact() {
           </motion.button>
 
           {status && (
-            <p className={`text-sm mt-2 ${status.includes("success") ? "text-green-400" : "text-zinc-400"}`}>
+            <p className={`text-sm mt-2 ${status.includes("success") ? "text-green-400" : (status.includes("Please") ? "text-red-500" : "text-zinc-400")}`}>
               {status}
             </p>
           )}

@@ -1,14 +1,29 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 import { Download } from "lucide-react";
 import iamge from "../assets/Profile.jpg";
 import { profile } from "../utils/data";
 import { IoLocation } from "react-icons/io5";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 export default function Profile({ className }) {
   const handleDownload = () => {
     const cvUrl = profile?.cv || "/resume.pdf";
     window.open(cvUrl, "_blank");
+  };
+
+  const handleWhatsApp = () => {
+    navigator.clipboard
+      .writeText(profile.phone)
+      .then(() => {
+        toast.success("Phone Number Copied!");
+      })
+      .catch((err) => {
+        toast.success(err);
+      });
+
+    const whatsappURL = `https://wa.me/${profile.phone}`;
+    window.open(whatsappURL, "_blank");
   };
 
   return (
@@ -22,6 +37,19 @@ export default function Profile({ className }) {
         backdrop-blur-md font-[Inter]
         flex flex-col items-center justify-center text-center space-y-8`}
     >
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={true}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
+        transition={Bounce}
+      />
       {/* Profile Image */}
       <div className="relative group">
         <img
@@ -69,8 +97,13 @@ export default function Profile({ className }) {
         className="flex flex-wrap justify-center gap-3 pt-2"
       >
         {profile.contact.map((pro, i) => (
-          <div
-            onClick={() => window.open("https://" + pro.link, "_blank")}
+          <motion.div
+            whileTap={{ scale: 0.95 }} 
+            onClick={() => {
+              i === 0
+                ? handleWhatsApp()
+                : window.open("https://" + pro.link, "_blank");
+            }}
             key={i}
             className="flex items-center gap-2 px-3 py-1.5 rounded-full
                        bg-[#0a0e12]/70 border border-[#0d1418]
@@ -81,7 +114,7 @@ export default function Profile({ className }) {
           >
             <pro.icon className="w-4 h-4 text-cyan-300" />
             <span className="text-[13px]">{pro.name}</span>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
 
@@ -113,8 +146,8 @@ export default function Profile({ className }) {
       >
         {profile.social.map((pro, i) => (
           <motion.div
-            whileTap={{ scale: 0.9}}
-            transition={{ delay:0.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ delay: 0.1 }}
             onClick={() => window.open("https://" + pro.link, "_blank")}
             key={i}
             className="flex items-center gap-2 px-3 py-1.5 rounded-full
@@ -124,7 +157,7 @@ export default function Profile({ className }) {
                        hover:border-cyan-500/30
                        transition-all cursor-pointer font-[Inter] font-medium"
           >
-            <pro.icon className="w-5 h-5" style={{ color: pro.color }}  />
+            <pro.icon className="w-5 h-5" style={{ color: pro.color }} />
           </motion.div>
         ))}
       </motion.div>
