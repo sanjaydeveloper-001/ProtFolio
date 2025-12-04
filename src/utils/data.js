@@ -41,7 +41,7 @@ export const profile = {
     { id: 1, name: "+91 9342000437", link: "", icon: IoPhonePortraitOutline },
     {
       id: 2,
-      name: "josephofficial.sanjay@gamil.com",
+      name: "josephofficial.sanjay@gmail.com",
       link: "gmail.com",
       icon: IoMailOutline,
     },
