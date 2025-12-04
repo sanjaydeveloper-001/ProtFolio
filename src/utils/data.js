@@ -4,9 +4,7 @@ import {
   IoLogoLinkedin,
   IoPhonePortraitOutline,
 } from "react-icons/io5";
-import {
-  FaReact, FaNodeJs, FaGithub, FaGit, FaJava
-} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGithub, FaGit, FaJava } from "react-icons/fa";
 
 import {
   SiMongodb,
@@ -37,8 +35,8 @@ export const profile = {
   summary:
     "MERN Developer skilled in React.js, Node.js, and building seamless web experiences",
   location: "Chennai, India",
-  phone:+919342000437,
-  email:"josephofficial.sanjay@gmail.com",
+  phone: "+919342000437",
+  email: "josephofficial.sanjay@gmail.com",
   contact: [
     { id: 1, name: "+91 9342000437", link: "", icon: IoPhonePortraitOutline },
     {
@@ -102,20 +100,20 @@ export const experience = [
   },
   {
     id: 2,
-    company: "Codesoft",
-    role: "Web Development",
-    duration: "Aug 2024 (1 Month)",
-    description:
-      "Built responsive web pages and interactive UI components using HTML, CSS, and JavaScript to enhance user experience.",
-    type: "Internship",
-  },
-  {
-    id: 3,
     company: "TechnoHacks",
     role: "Web Development",
     duration: "Oct 2024 (1 Month)",
     description:
       "Developed frontend projects using React.js and REST APIs, improving understanding of client-server communication and authentication workflows.",
+    type: "Internship",
+  },
+  {
+    id: 3,
+    company: "Codesoft",
+    role: "Web Development",
+    duration: "Aug 2024 (1 Month)",
+    description:
+      "Built responsive web pages and interactive UI components using HTML, CSS, and JavaScript to enhance user experience.",
     type: "Internship",
   },
 ];
@@ -165,26 +163,26 @@ export const projects = [
 
 /* === icon map for common frameworks/tools === */
 export const TECH_ICON_MAP = {
-  "mern": { Icon: FaReact, color: "#61DBFB" }, 
-  "react": { Icon: FaReact, color: "#61DBFB" },
-  "node": { Icon: FaNodeJs, color: "#3C873A" },
-  "express": { Icon: SiExpress, color: "#000000" },
-  "tailwindcss": { Icon: SiTailwindcss, color: "#38BDF8" },
-  "bootstrap": { Icon: SiBootstrap, color: "#7A2B8F" },
-  "git": { Icon: FaGit, color: "#F05032" },
-  "github": { Icon: FaGithub , color: "#181717" },
+  mern: { Icon: FaReact, color: "#61DBFB" },
+  react: { Icon: FaReact, color: "#61DBFB" },
+  node: { Icon: FaNodeJs, color: "#3C873A" },
+  express: { Icon: SiExpress, color: "#000000" },
+  tailwindcss: { Icon: SiTailwindcss, color: "#38BDF8" },
+  bootstrap: { Icon: SiBootstrap, color: "#7A2B8F" },
+  git: { Icon: FaGit, color: "#F05032" },
+  github: { Icon: FaGithub, color: "#181717" },
   "vs code": { Icon: VscVscode, color: "#007ACC" },
-  "vscode": { Icon: VscVscode, color: "#007ACC" },
-  "flutter": { Icon: SiFlutter, color: "#02569B" },
-  "mongodb": { Icon: SiMongodb, color: "#47A248" },
-  "firebase": { Icon: SiFirebase, color: "#FFCA28" },
-  "redux": { Icon: SiRedux, color: "#764ABC" },
-  "javascript": { Icon: SiJavascript, color: "#F7DF1E" },
-  "html": { Icon: SiHtml5, color: "#E34F26" },
-  "css": { Icon: SiCss3, color: "#264DE4" },
-  "python": { Icon: SiPython, color: "#3776AB" },
-  "c": { Icon: SiC, color: "#283593" },
-  "java": { Icon: FaJava, color: "#f89820" }
+  vscode: { Icon: VscVscode, color: "#007ACC" },
+  flutter: { Icon: SiFlutter, color: "#02569B" },
+  mongodb: { Icon: SiMongodb, color: "#47A248" },
+  firebase: { Icon: SiFirebase, color: "#FFCA28" },
+  redux: { Icon: SiRedux, color: "#764ABC" },
+  javascript: { Icon: SiJavascript, color: "#F7DF1E" },
+  html: { Icon: SiHtml5, color: "#E34F26" },
+  css: { Icon: SiCss3, color: "#264DE4" },
+  python: { Icon: SiPython, color: "#3776AB" },
+  c: { Icon: SiC, color: "#283593" },
+  java: { Icon: FaJava, color: "#f89820" },
 };
 
 // src/utils/data.js
@@ -248,10 +246,15 @@ export const interests = [
   "Cybersecurity",
   "Open Source Contribution",
   "Data Science",
-]
-
-
-
+  "DevOps & Automation",
+  "Backend Engineering",
+  "Full Stack Development",
+  "Data Engineering",
+  "Software Testing & QA",
+  "Database Management Systems",
+  "Big Data Analytics",
+  "Blockchain & Web3",
+];
 
 // Certification //
 // Certification Images
@@ -262,72 +265,64 @@ import pythonB from "../assets/Certificates/PythonB.png";
 import pythonDs from "../assets/Certificates/PythonDs.png";
 import reactB from "../assets/Certificates/ReactB.png";
 import reactJs from "../assets/Certificates/ReactJs.png";
-import { color } from "framer-motion";
+import gitgithub from "../assets/Certificates/GitGithub.png";
 
 export const certifications = [
   {
     id: 1,
+    name: "Git , GitHub",
+    issuer: "Google",
+    image: gitgithub,
+    link: "https://www.coursera.org/account/accomplishments/verify/Y75H3HS3Z5O5",
+  },
+  {
+    id: 2,
     name: "Graphics Design (Elite)",
     issuer: "NPTEL",
     image: graphics,
     link: "https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/107/noc25-de12/Course/NPTEL25DE12S54320122404502505.pdf",
   },
   {
-    id: 2,
+    id: 3,
     name: "Frontend Developer Certification",
     issuer: "HackerRank",
     image: frontend,
     link: "https://www.hackerrank.com/certificates/60d3d0677c76",
   },
   {
-    id: 3,
+    id: 4,
     name: "Python for Data Science (Elite)",
     issuer: "NPTEL",
     image: pythonDs,
     link: "https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs104/Course/NPTEL25CS104S13320337209133964.pdf",
   },
   {
-    id: 4,
+    id: 5,
     name: "React JS",
     issuer: "Scaler",
     image: reactJs,
     link: "https://moonshot.scaler.com/s/sl/uvPp1lYf3g?_gl=1*zh3azi*_gcl_au*MTMxNzk1OTk4Mi4xNzUyOTI5NjUy*FPAU*MTMxNzk1OTk4Mi4xNzUyOTI5NjUy*_ga*MTE3OTk3OTUzMy4xNzUyOTI5NjUz*_ga_53S71ZZG1X*czE3NTc1OTQ3NzUkbzIkZzEkdDE3NTc1OTQ4MzQkajEkbDAkaDE0NDYyNDc4MTQ.",
   },
   {
-    id: 5,
+    id: 6,
     name: "React (Basic)",
     issuer: "HackerRank",
     image: reactB,
     link: "https://www.hackerrank.com/certificates/f39393f134bc",
   },
   {
-    id: 6,
+    id: 7,
     name: "Python (Basic)",
     issuer: "HackerRank",
     image: pythonB,
     link: "https://www.hackerrank.com/certificates/177fae15eadc",
   },
   {
-    id: 7,
+    id: 8,
     name: "Java Programming",
     issuer: "HackerRank",
     image: javaB,
     link: "https://www.hackerrank.com/certificates/d875789a81d5",
   },
-  
-  
 ];
 
-
-export const config = {
-  googleAuth: {
-    enabled: true,
-    description: "Integrated Google OAuth 2.0 for secure user authentication.",
-  },
-  jwt: {
-    enabled: true,
-    secret: "YOUR_JWT_SECRET_KEY", // Replace this safely in .env
-    description:
-      "Used JWT for secure token-based authentication and user sessions.",
-  },
-};

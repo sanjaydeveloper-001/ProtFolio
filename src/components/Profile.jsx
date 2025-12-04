@@ -35,7 +35,7 @@ export default function Profile({ className }) {
         bg-linear-to-br from-[#030406] via-[#05070a] to-[#020305]
         rounded-3xl p-10 sm:p-12 shadow-xl ring-1 ring-white/20
         backdrop-blur-md font-[Inter]
-        flex flex-col items-center justify-center text-center space-y-8`}
+        flex flex-col items-center justify-center text-center space-y-6 xl:space-y-8`}
     >
       <ToastContainer
         position="top-center"
@@ -56,7 +56,7 @@ export default function Profile({ className }) {
           draggable={false}
           src={iamge}
           alt={`${profile.name} profile`}
-          className="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-full
+          className="w-40 h-40 xl:w-48 xl:h-48 object-cover rounded-full
                      ring-3 ring-cyan-300/80 shadow-md
                      transition-transform duration-500 group-hover:scale-105"
         />
@@ -75,10 +75,10 @@ export default function Profile({ className }) {
 
       {/* Name & Summary */}
       <div className="space-y-2">
-        <h1 className="text-4xl font-[Poppins] font-semibold tracking-tight text-white">
+        <h1 className="text-4xl sm:text-3xl xl:text-4xl font-[Poppins] font-semibold tracking-tight text-white">
           {profile.name}
         </h1>
-        <p className="text-base text-zinc-400 max-w-[44ch] leading-relaxed font-light">
+        <p className="text-sm xl:text-base text-zinc-400 max-w-[44ch] leading-relaxed font-light">
           {profile.summary}
         </p>
         {profile.location && (
@@ -113,7 +113,7 @@ export default function Profile({ className }) {
                        transition-all cursor-pointer font-[Inter] font-medium"
           >
             <pro.icon className="w-4 h-4 text-cyan-300" />
-            <span className="text-[13px]">{pro.name}</span>
+            <span className="text-[11px] xl:text-[13px]">{pro.name}</span>
           </motion.div>
         ))}
       </motion.div>
@@ -127,7 +127,7 @@ export default function Profile({ className }) {
         }}
         whileTap={{ scale: 0.97 }}
         onClick={handleDownload}
-        className="flex items-center gap-3 px-6 py-3 rounded-2xl
+        className="flex items-center gap-3 px-4 py-2 xl:px-6 xl:py-3 rounded-2xl
                    bg-linear-to-r from-cyan-700/80 to-sky-700/70
                    text-white font-[Poppins] font-medium tracking-wide
                    transition-all ring-1 ring-white/10"
@@ -150,7 +150,7 @@ export default function Profile({ className }) {
             transition={{ delay: 0.1 }}
             onClick={() => window.open("https://" + pro.link, "_blank")}
             key={i}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full
+            className="flex items-center gap-2 px-2 py-1 xl:px-3 xl:py-1.5 rounded-full
                        bg-[#0a0e12]/70 border border-[#2374b7]
                        text-sm text-zinc-100
                        hover:bg-[#0f1a1f]/90
