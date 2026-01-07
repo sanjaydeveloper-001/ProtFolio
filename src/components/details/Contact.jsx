@@ -145,7 +145,7 @@ export default function Contact() {
             whileTap={!loading ? { scale: 0.97 } : {}}
             disabled={loading}
             type="submit"
-            className={`flex justify-center items-center gap-2 py-2 rounded-md border border-cyan-400 font-medium transition ${
+            className={`cursor-pointer flex justify-center items-center gap-2 py-2 rounded-md border border-cyan-400 font-medium transition ${
               loading
                 ? "bg-cyan-500/10 text-cyan-200 cursor-not-allowed"
                 : "bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30"

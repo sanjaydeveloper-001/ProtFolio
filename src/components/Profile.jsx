@@ -143,6 +143,7 @@ export default function Profile({ className }) {
                     bg-linear-to-r from-cyan-700/80 to-sky-700/70
                     text-white font-[Poppins] font-medium tracking-wide
                     transition-all ring-1 ring-white/10
+                    cursor-pointer
                     ${loading ? "opacity-60 cursor-not-allowed" : ""}`}
         aria-label={`Download CV ${loading ? "disabled" : "active"}`}
         onClick={() =>

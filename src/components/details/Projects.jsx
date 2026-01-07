@@ -77,7 +77,7 @@ export default function Projects() {
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="relative flex items-center justify-center px-6 py-2 rounded-2xl font-[Poppins] font-medium tracking-wide text-white text-sm backdrop-blur-md border border-white/10 bg-linear-to-r from-cyan-700/55 to-sky-700/55 hover:from-cyan-600/65 hover:to-sky-600/65 transition-all duration-300"
+            className="relative cursor-pointer flex items-center justify-center px-6 py-2 rounded-2xl font-[Poppins] font-medium tracking-wide text-white text-sm backdrop-blur-md border border-white/10 bg-linear-to-r from-cyan-700/55 to-sky-700/55 hover:from-cyan-600/65 hover:to-sky-600/65 transition-all duration-300"
           >
             <span className="relative z-10">{expanded ? "Show Less" : `Show More ${projects.length - 3}+`}</span>
             <motion.span aria-hidden="true" className="absolute inset-0 rounded-2xl bg-linear-to-r from-cyan-500/30 to-sky-500/30 opacity-0 blur-md" whileHover={{ opacity: 1 }} transition={{ duration: 0.25 }} />
